@@ -213,6 +213,35 @@
     filter:grayscale(0.15);
   }
 
+  /* info strip (horario / cobertura / pago) */
+  .info-strip{
+    display:flex; gap:0; margin:0 0 32px; border-top:1px dashed var(--paper-line); border-bottom:1px dashed var(--paper-line);
+    flex-wrap:wrap;
+  }
+  .info-item{
+    flex:1 1 220px; padding:16px 18px; border-left:1px dashed var(--paper-line);
+    font-size:0.86rem; color:var(--ink-soft);
+  }
+  .info-item:first-child{border-left:none;}
+  .info-item b{color:var(--navy); display:block; font-weight:700; margin-bottom:4px; font-family:'Space Mono',monospace; font-size:0.72rem; text-transform:uppercase; letter-spacing:0.04em;}
+
+  /* FAQ accordion */
+  .faq-item{
+    background:var(--card); border:1px solid var(--paper-line); border-radius:3px; margin-bottom:10px; overflow:hidden;
+  }
+  .faq-item summary{
+    list-style:none; cursor:pointer; padding:16px 18px; display:flex; align-items:center; justify-content:space-between;
+    font-weight:600; font-size:0.95rem; color:var(--ink);
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item .plus{
+    font-family:'Space Mono',monospace; color:var(--teal); font-size:1.1rem; transition:transform .2s; flex-shrink:0; margin-left:12px;
+  }
+  .faq-item[open] .plus{transform:rotate(45deg);}
+  .faq-item .faq-a{
+    padding:0 18px 16px; color:var(--ink-soft); font-size:0.88rem; border-top:1px dashed var(--paper-line); margin-top:0; padding-top:12px;
+  }
+
   footer{
     background:var(--navy-deep); color:#a9bdd4; padding:22px 0; font-size:0.78rem;
     font-family:'Space Mono',monospace;
@@ -257,6 +286,7 @@
       <a href="#respaldos">Respaldos</a>
       <a href="#asesoria">Asesoría</a>
       <a href="#desarrollo">Desarrollo</a>
+      <a href="#faq">Preguntas</a>
       <a href="#contacto">Contacto</a>
     </nav>
     <a class="cta-btn" href="https://wa.me/523315634573" target="_blank" rel="noopener noreferrer">Escribir →</a>
@@ -413,6 +443,44 @@
   <div>
     <h2>Sobre mí</h2>
     <p class="lede">Soy hijo de la señora Silvia, y llevo 5 años presentándome en este, nuestro negocio familiar. Con el tiempo, algunos vecinos empezaron a buscarme por problemas con sus equipos, impresoras y redes — siempre de manera informal, entre conocidos, amigos y vecinos muy amables que decidieron depositar su confianza en mí. Soy estudiante de Ingeniería en Programación y Tecnólogo en Desarrollo de Software, y ahora estoy dando el siguiente paso: convertir este apoyo informal en un servicio técnico profesional, con precios claros, tiempos de entrega precisos y más alcance para todos ustedes.</p>
+  </div>
+</section>
+
+<section class="cat" id="faq">
+  <div class="wrap">
+    <span class="tab-label">❓ Preguntas</span>
+    <h2>Preguntas Frecuentes</h2>
+
+    <div class="info-strip">
+      <div class="info-item"><b>Horario</b>Lun–Sáb: 7:00–14:30 y 18:00–21:00. Domingos, bajo cita y cotización.</div>
+      <div class="info-item"><b>Zona de cobertura</b>Haciendas Vista Hermosa y alrededores sin costo extra. Más lejos, se cotiza el transporte.</div>
+      <div class="info-item"><b>Formas de pago</b>Efectivo, transferencia y tarjeta.</div>
+    </div>
+
+    <details class="faq-item">
+      <summary>¿Cuánto tardan en atenderme? <span class="plus">+</span></summary>
+      <p class="faq-a">Normalmente coordinamos por WhatsApp el mismo día. El tiempo exacto de entrega queda por escrito en tu Orden de Servicio, según la complejidad del trabajo.</p>
+    </details>
+    <details class="faq-item">
+      <summary>¿Necesito llevar mi equipo o vas a domicilio? <span class="plus">+</span></summary>
+      <p class="faq-a">Voy a domicilio para la gran mayoría de servicios: soporte, redes, cámaras, armado y respaldos. Si tu equipo necesita algo muy especializado, te lo hago saber desde la visita de diagnóstico.</p>
+    </details>
+    <details class="faq-item">
+      <summary>¿Qué formas de pago aceptas? <span class="plus">+</span></summary>
+      <p class="faq-a">Efectivo, transferencia y tarjeta.</p>
+    </details>
+    <details class="faq-item">
+      <summary>¿Qué cubre la garantía? <span class="plus">+</span></summary>
+      <p class="faq-a">Cubre la mano de obra del servicio realizado; el plazo (7, 15 o 30 días) queda anotado en tu Orden de Servicio. No cubre fallas de fábrica de piezas ni daños por mal uso posterior.</p>
+    </details>
+    <details class="faq-item">
+      <summary>¿Cuál es tu horario de atención? <span class="plus">+</span></summary>
+      <p class="faq-a">Lunes a sábado de 7:00 a 14:30 y de 18:00 a 21:00. Domingos, bajo cita y cotización previa.</p>
+    </details>
+    <details class="faq-item">
+      <summary>¿A qué zonas te mueves? <span class="plus">+</span></summary>
+      <p class="faq-a">Fraccionamiento Haciendas Vista Hermosa y alrededores cercanos, sin costo extra. Si tu ubicación está más lejos, cotizamos el transporte antes de confirmar la visita.</p>
+    </details>
   </div>
 </section>
 
